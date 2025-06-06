@@ -37,8 +37,8 @@ def calculate_target_date(current_price, target_price, cagr):
     return math.log(target_price / current_price) / math.log(1 + cagr)
 
 # Streamlit 앱 구성
-st.set_page_config(page_title="단지 가격 비교기", layout="wide")
-st.title("단지별 미래 시점 가격 비교기")
+st.set_page_config(page_title="갈아타기 비교앱", layout="wide")
+st.title("갈아타기 비교앱")
 
 # 앱 사용 안내 및 홍보 정보
 with st.expander("ℹ️ 사용 안내 및 개발자 정보", expanded=True):
@@ -48,13 +48,12 @@ with st.expander("ℹ️ 사용 안내 및 개발자 정보", expanded=True):
     - '결과 확인' 버튼을 누르면 1, 2, 3, 5, 10년 후 예상 가격과 목표가 도달 시점을 확인할 수 있습니다.
     - 두 단지 간의 향후 가격 차이도 함께 확인할 수 있습니다.
     - 데이터값은 해당 연도 최대값을 사용하였으며 상승률은 연복리 상승률 기준임.
-    - 세금 계산은 새무사와 상의하세요.
+    - 세금 계산은 세무사와 상의하세요.
     - 부담할 세금 보다 미래 가액 차이가 크면 갈아타세요.
     - 해당 단지 선정은 24년 거래건수 100건 이상의 단지만 선정하였습니다(단지이름이 중복일 경우 제외되었음).
 
 
-    **👨‍💼 개발자 및 중개업소 정보**
-    **압구정 최고의 부동산 전문가!**  
+    **👨‍💼  **압구정 최고의 부동산 전문가!**  
     - **업소명**: 압구정 원 부동산중개  
     - **대표자**: 최규호 이사  
     - **문의전화**: [📞 010-3065-1780]
