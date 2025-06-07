@@ -6,9 +6,10 @@ import math
 # 파일 로드
 @st.cache_data
 def load_data():
-    df = pd.read_excel("앱만들기 단지데이터 250606(압구정포함).xlsx")
+    df = pd.read_excel("앱만들기 단지데이터 250606(압구정포함).xlsx", sheet_name="Sheet1")
     df = df.set_index("단지_평형")
     return df
+
 
 # CAGR 계산
 def calculate_dynamic_cagr(row):
