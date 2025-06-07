@@ -18,12 +18,14 @@ def calculate_dynamic_cagr(row):
     if len(valid) < 2:
         return None
     start_year = valid.index[0]
-    periods = 2025 - start_year
+    end_year = 2025 if 2025 in valid.index else valid.index[-1]
+    periods = end_year - start_year
     start_price = valid[start_year]
-    end_price = valid[2025] if 2025 in valid else None
+    end_price = valid[end_year]
     if pd.isna(start_price) or start_price <= 0 or pd.isna(end_price):
         return None
     return (end_price / start_price) ** (1 / periods) - 1
+
 
 # 미래가격 예측
 def predict_price(current_price, cagr, years_passed):
